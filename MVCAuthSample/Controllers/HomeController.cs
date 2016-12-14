@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCAuthSample.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,8 +20,7 @@ namespace MVCAuthSample.Controllers
 
             return View();
         }
-
-        [Authorize(Roles = "Administrator, Development")]
+        [AuthLog(Roles = "Administrator")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

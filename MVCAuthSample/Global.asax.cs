@@ -3,7 +3,9 @@ using MVCAuthSample.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Principal;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -28,13 +30,19 @@ namespace MVCAuthSample
             }
 
             IUserRepository userRepo = new UserRepository();
-            var users = userRepo.GetAll();
+
             string userName = User.Identity.Name.Split(new string[] { "\\" }, StringSplitOptions.None)[1];
             var user = userRepo.GetByUserId(userName);
             //var users = IoC.IoCStrategy.Get<IUserRepository>();
             //var u = users.Get(User.Identity.Name);
-            HttpContext.Current.User =
-                    new CustomPrincipal((WindowsIdentity)User.Identity, user);
+            //HttpContext.Current.User =
+            //        new CustomPrincipal((WindowsIdentity)User.Identity, user);
+
+            GenericPrincipal principal = new GenericPrincipal(HttpContext.Current.User.Identity, new String[] { "Administrator, Development" });
+
+            Thread.CurrentPrincipal = HttpContext.Current.User = principal;
+
+            
         }
     }
 }
