@@ -6,20 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCAuthSample.DBModel
+namespace MVCAuthSample.DBModel.Entity.Security
 {
-    public class User
+    public class Role
     {
         [Key]
-        public Guid Id { get; set;}
+        public Guid Id { get; set; }
 
         [StringLength(25)]
-        public String UserId { get; set; }
+        public String RoleName { get; set; }
 
-        [StringLength(25)]
-        public String FirstName { get; set; }
-
-        public virtual ICollection<Role> Roles { get; set; }
-
+        public virtual ICollection<User> Users { get; set; }
     }
 }

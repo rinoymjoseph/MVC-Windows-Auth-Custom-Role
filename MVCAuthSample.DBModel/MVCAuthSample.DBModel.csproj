@@ -60,8 +60,14 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MVCAuthSampleDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Entity\Security\Role.cs" />
+    <Compile Include="Entity\Security\User.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\IGenericRepository.cs" />
+    <Compile Include="Repository\Security\IRoleRepository.cs" />
+    <Compile Include="Repository\Security\IUserRepository.cs" />
+    <Compile Include="Repository\Security\RoleRepository.cs" />
+    <Compile Include="Repository\Security\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -75,6 +81,7 @@
       <DependentUpon>201612141100001_Test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

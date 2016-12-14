@@ -1,4 +1,6 @@
 ﻿using MVCAuthSample.DBModel;
+using MVCAuthSample.DBModel.Entity.Security;
+using MVCAuthSample.DBModel.Repository.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +13,17 @@ namespace MVCAuthSample.Test
     {
         static void Main(string[] args)
         {
-            CreateUser();
+            CreateRole();
         }
 
-        private static void CreateUser()
+        private static void CreateRole()
         {
-            using (var ctx = new MVCAuthSampleDBContext())
-            {
-                User user = new User();
-                user.Id = Guid.NewGuid();
-                user.UserId = "Test";
-                user.FirstName = "Test";
-                ctx.Users.Add(user);
-                ctx.SaveChanges();
-            }
+            Role role = new Role();
+            role.Id = Guid.NewGuid();
+            role.RoleName = "Engineer";
+            IRoleRepository roleRepository = new RoleRepository();
+            roleRepository.Add(role);
+            roleRepository.Save();
         }
     }
 }
