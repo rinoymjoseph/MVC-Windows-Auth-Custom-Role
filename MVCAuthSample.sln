@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAuthSample", "MVCAuthSam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAuthSample.DBModel", "MVCAuthSample.DBModel\MVCAuthSample.DBModel.csproj", "{436933BC-7688-4231-B166-7F92E570C1E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAuthSample.Repository", "MVCAuthSample.Repository\MVCAuthSample.Repository.csproj", "{1CEBE219-2A27-4520-BE37-FFA527AD9B6A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAuthSample.Test", "MVCAuthSample.Test\MVCAuthSample.Test.csproj", "{88C4F951-8E14-4D24-ADD4-A3EF17DE4ADA}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{436933BC-7688-4231-B166-7F92E570C1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{436933BC-7688-4231-B166-7F92E570C1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{436933BC-7688-4231-B166-7F92E570C1E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CEBE219-2A27-4520-BE37-FFA527AD9B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CEBE219-2A27-4520-BE37-FFA527AD9B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CEBE219-2A27-4520-BE37-FFA527AD9B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CEBE219-2A27-4520-BE37-FFA527AD9B6A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88C4F951-8E14-4D24-ADD4-A3EF17DE4ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88C4F951-8E14-4D24-ADD4-A3EF17DE4ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C4F951-8E14-4D24-ADD4-A3EF17DE4ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU

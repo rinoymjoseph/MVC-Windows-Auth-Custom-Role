@@ -64,10 +64,6 @@
       <Project>{436933bc-7688-4231-b166-7f92e570c1e7}</Project>
       <Name>MVCAuthSample.DBModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MVCAuthSample.Repository\MVCAuthSample.Repository.csproj">
-      <Project>{1cebe219-2a27-4520-be37-ffa527ad9b6a}</Project>
-      <Name>MVCAuthSample.Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
