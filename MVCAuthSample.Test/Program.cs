@@ -13,7 +13,8 @@ namespace MVCAuthSample.Test
     {
         static void Main(string[] args)
         {
-            CreateRole();
+            //CreateRole();
+            GetByUserId();
         }
 
         private static void CreateRole()
@@ -25,5 +26,15 @@ namespace MVCAuthSample.Test
             roleRepository.Add(role);
             roleRepository.Save();
         }
+
+        private static void GetByUserId()
+        {
+            IUserRepository userRepo = new UserRepository();
+            string userName = "LAPTOP-EUU3Q2UL\\rinoy";
+             userName= userName.Split(new string[] { "\\" }, StringSplitOptions.None)[1];
+            var user1 = userRepo.GetByUserId(userName);
+            var user2 = userRepo.GetByUserId("rinoy");
+        }
+
     }
 }

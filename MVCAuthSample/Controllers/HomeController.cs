@@ -20,6 +20,7 @@ namespace MVCAuthSample.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrator, Development")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

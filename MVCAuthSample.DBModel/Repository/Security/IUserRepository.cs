@@ -9,5 +9,6 @@ namespace MVCAuthSample.DBModel.Repository.Security
 { 
     public interface IUserRepository : IGenericRepository<User>
     {
+        User GetByUserId(String userId);
     }
 }

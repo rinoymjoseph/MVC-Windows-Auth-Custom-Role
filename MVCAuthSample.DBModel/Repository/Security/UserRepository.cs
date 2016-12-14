@@ -9,6 +9,9 @@ namespace MVCAuthSample.DBModel.Repository.Security
 {
     public class UserRepository : GenericRepository<MVCAuthSampleDBContext, User>, IUserRepository
     {
-
+        public User GetByUserId(String userId)
+        {
+            return Context.Users.FirstOrDefault(t => t.UserId == userId);
+        }
     }
 }
